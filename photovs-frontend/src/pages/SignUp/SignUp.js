@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import AuthLayout from "../../components/Auth";
 import { Row, Title  } from "../../layouts/StyledContainer";
 import logo from '../../assets/images/photoversus.png'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import useSignUp from "../../hooks/useSignUp";
 import Input from "../../components/Input";
@@ -33,9 +33,13 @@ export default function SignUp() {
         }
     }
 
-
-
     const navigate = useNavigate();
+
+    useEffect(()=>{
+        if(localStorage.userData){
+            navigate('/main');
+        }
+    },[]);
     
     return(
         <AuthLayout>
