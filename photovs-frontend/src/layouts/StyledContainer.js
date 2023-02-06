@@ -7,7 +7,7 @@ export const StyledContainer = styled(Container)`
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 30px;
+    padding: 20px;
 `;
 
 export const Title = styled.h1`

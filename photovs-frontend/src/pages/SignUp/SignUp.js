@@ -1,6 +1,6 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import AuthLayout from "../../components/Auth";
-import { Label, Row, Title } from "../../layouts/StyledContainer";
+import { Row, Title  } from "../../layouts/StyledContainer";
 import logo from '../../assets/images/photoversus.png'
 import { useState } from "react";
 import { toast } from "react-toastify";
@@ -41,6 +41,7 @@ export default function SignUp() {
         <AuthLayout>
             <Row>
                 <img src={logo} height="150"/>
+                <Title>Sign up</Title>
             </Row>
             <Row>
                 <Form onSubmit={submitForm}>
@@ -53,7 +54,7 @@ export default function SignUp() {
                 </Form>
             </Row>
             <Row>
-                <p onClick={()=>navigate("/sign-in")}>Click here if you already have an account!</p>
+                <Link to="/sign-in">Click here if you already have an account!</Link>
             </Row>
         </AuthLayout>
     );

@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export default function Input({
   className = "",
-  height = "65px",
+  height = "42px",
   placeholder,
   type,
   name,
@@ -24,7 +24,7 @@ export default function Input({
 }
 
 const Wrapper = styled.input`
-
+    height: ${props=>props.height};
   &.log {
     width: 100%;
     background: #ffffff;
